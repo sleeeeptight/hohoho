@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bxslider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <title>HOHO HOTEL</title>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div id="topmenu">
+        <ul class="toplist">
+          <li>
+            <div class="Destinations">
+              <div class="item_list1">
+                <select>
+                  <option value="Destinations">Destinations</option>
+                  <option value="2">Seoul</option>
+                  <option value="3">Daejeon</option>
+                  <option value="4">Busan</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="Destinations">
+              <div class="item_list1">
+                <select>
+                  <option value="Destinations">English</option>
+                  <option value="2">한국어</option>
+                  <option value="3">日本語</option>
+                  <option value="4">français</option>
+                </select>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="home clearfix">
+        <h2 class="logo_box"><a href="index.html"><img src="images/logo.png" alt="호호호텔로고"></a></h2>
+        <div class="wrap clearfix">
+          <nav>
+            <ul class="gnb">
+              <li><a href="#">The Hotel</a></li>
+              <li><a href="#">Stay</a></li>
+              <li><a href="#">Dine</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- <button class="r_button open" type="button" onclick="window.open('https://opendict.korean.go.kr/main')" taget="_blank">Reservation -->
+        <button class="r_button open" id="jsBtn" type="button">Reservation &nbsp;&nbsp;
+          <i class="far fa-calendar-check"></i></button>
+
+        <div class="modal hidden" id="jsModal">
+          <button class="modal__closeBtn" id="jsCloseBtn"><i class="fas fa-times"></i></button>
+          <p class="modal_title">Reservation</p>
+          <div class="border_box">
+            <div class="arrival">
+              <p>Arrival</p>
+              <div class="border_inner">
+                <input type="date" id="currentDate">
+                <script>
+                  document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+                </script>
+              </div>
+            </div>
+            
+            <div class="departure">
+              <p>Departure</p>
+              <div class="border_inner">
+                <input type="date" id="departure">
+                <script>
+                  document.getElementById('departure').value = new Date().toISOString().substring(0, 10);;
+                </script>
+              </div>
+            </div>
+
+            <div class="persons">
+              <p>Persons/Room</p>
+              <div class="border_inner">
+                <div class="item_list1">
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="rooms">
+              <p>Rooms</p>
+              <div class="border_inner">
+                <div class="item_list2">
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button type="button" onclick="window.open('index.html')" class="m_button" taget="_blank">FIND RATES</button>
+
+      </div>
+    </div>
+
+    <div id="container">
+      <div class="group_1">
+        <div class="banner">
+          <img src="images/main_banner.png" alt="공원에서사슴부르는사진">
+          <div class="text_box">
+            <p>What to do... >_-</p>
+          </div>
+        </div>
+      </div>
+      <div class="group_2">
+        <div class="wrap clearfix">
+          <div class="title_box">
+            <p>What's on at the Hotel</p>
+          </div>
+          <div class="content_box">
+            <div class="img_box">
+              <img src="images/stay.png" alt="객실사진">
+            </div>
+            <div class="text_box">
+              <p class="b_text">What's on at the Hotel</p>
+              <p class="s_text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+              </p>
+              <button type="button" onclick="location.href='#'" class="m_button">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group_3">
+        <div class="wrap clearfix">
+          <div class="title_box">
+            <p>Services and Facilities</p>
+          </div>
+          <section class="content_box1">
+            <div class="img_box">
+              <img src="images/services_1.png" alt="객실사진">
+            </div>
+            <div class="text_box">
+              <p class="b_text">What's on at the Hotel</p>
+              <p class="s_text">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+              <button type="button" onclick="location.href='#'" class="m_button">Read More</button>
+            </div>
+          </section>
+          <section class="content_box2">
+            <div class="img_box">
+              <img src="images/services_2.png" alt="객실사진">
+            </div>
+            <div class="text_box">
+              <p class="b_text">What's on at the Hotel</p>
+              <p class="s_text">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+              <button type="button" onclick="location.href='#'" class="m_button">Read More</button>
+            </div>
+          </section>
+          <section class="content_box3">
+            <div class="img_box">
+              <img src="images/services_3.png" alt="객실사진">
+            </div>
+            <div class="text_box">
+              <p class="b_text">What's on at the Hotel</p>
+              <p class="s_text">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+              <!-- <button type="button" onclick="location.href='#'" class="m_button" taget="_blank">Read More</button> -->
+              <button type="button" onclick="window.open('https://opendict.korean.go.kr/main')" class="m_button" taget="_blank">Read More</button>
+            </div>
+          </section>
+        </div>
+
+      </div>
+      <div class="group_4 clearfix">
+        <!-- <img src="images/dine_bg.png" alt=""> -->
+        <div class="wrap clearfix">
+          <div class="title_box">
+            <p>HOHO Hotel Dine</p>
+          </div>
+          <div class="imgwrap clearfix">
+            <div class="img_box1"><img src="images/dine_001.png" alt=""></div>
+            <div class="img_box2"><img src="images/dine_001.png" alt=""></div>
+            <div class="img_box3"><img src="images/dine_001.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group_5">
+        <div class="wrap clearfix">
+          <div class="img_box1"><img src="images/dine_more_01.png" alt=""></div>
+          <div class="img_box2"><img src="images/dine_more_02.png" alt=""></div>
+          <div class="img_innerwrap">
+            <div class="img_box3"><img src="images/dine_more_03.png" alt=""></div>
+            <div class="img_box4"><img src="images/dine_more_04.png" alt=""></div>
+          </div>
+          <button  class="m_button" type="button" onclick="location.href='#'">Read More</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="group_6">
+      <div class="wrap clearfix">
+        <div class="title_box"><p>What's on in HOHO</p></div>
+        <section class="img_box1">
+          <img src="images/hoho_what1.png" alt="">
+          <!-- <p class="img_textb">Services and facilities</p> -->
+          <p class="img_texts">At the Triennial, the Loyalty of Betrayal According to Carlo Aymonino</p>
+          <button  class="m_button" type="button" onclick="location.href='#'">Read More</button>
+        </section>
+        <section class="img_box2">
+          <img src="images/hoho_what2.png" alt="">
+          <!-- <p class="img_textb">Services and facilities</p> -->
+          <p class="img_texts">The Vittoria Alata Flies Over Brescia Once Again</p>
+          <button  class="m_button" type="button" onclick="location.href='#'">Read More</button>
+        </section>
+        <section class="img_box3">
+          <img src="images/hoho_what3.png" alt="">
+          <!-- <p class="img_textb">Services and facilities</p> -->
+          <p class="img_texts">The Correspondence of Riccardo Arena at the Galleria Milano</p>
+          <button  class="m_button" type="button" onclick="location.href='#'">Read More</button>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="wrap clearfix">
+        <h2 class="footer_logo">
+          <a href="#"><img src="images/logo_footer.png" alt=""></a>
+        </h2>
+        <div class="footer_box">
+          <section class="text_box1">
+            <h2>OUR COMPANY</h2>
+            <ul class="text_list">
+              <li><a href="#">호호호텔앤리조트</a></li>
+              <li><a href="#">호호호텔 역사</a></li>
+              <li><a href="#">호호호텔 브랜드</a></li>
+            </ul>
+          </section>
+          <section class="text_box2">
+            <h2>FOR GUESTS</h2>
+            <ul class="text_list">
+              <li><a href="#">호텔 검색/예약</a></li>
+              <li><a href="#">레스토랑 검색/예약</a></li>
+              <li><a href="#">예약확인</a></li>
+              <li><a href="#">고객센터</a></li>
+            </ul>
+          </section>
+          <section class="text_box3">
+            <h2>MEMBERSHIP</h2>
+            <ul class="text_list">
+              <li><a href="#">맴버십 종합안내</a></li>
+              <li><a href="#">호호호텔 리워즈</a></li>
+              <li><a href="#">마이 호호호텔</a></li>
+            </ul>
+          </section>
+
+          <section class="footer_listbox clearfix">
+            <ul>
+              <li class="footer_list1"><a href="#">개인정보처리방침</a></li>
+              <li class="footer_list1"><a href="#">이용약관</a></li>
+              <li class="footer_list1"><a href="#">사이트맵</a></li>
+              <li class="footer_list1"><a href="#">인재채용</a></li>
+              <li class="footer_list1"><a href="#">윤리경영</a></li>
+              <li class="footer_list2"><a href="#">제휴문의</a></li>
+            </ul>
+          </section>
+          <section class="contact">
+            <p class="contact_item1">호호호텔 예약 및 안내<span>02-1234-5678</span></p>
+            <p class="contact_item2">호호호텔 이메일 문의<span>contact@hohohotel.com</span></p>
+          </section>
+          <section class="social_list clearfix">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-tripadvisor"></i></a></li>
+            </ul>
+          </section>
+
+          <div class="address clearfix">
+            <ul class="address_list1">
+              <li>서울시 강서구 공항대로509</li>
+              <li>대표이사 박호호</li>
+              <li>T.02-1234-5678</li>
+            </ul>
+            <ul class="address_list2">
+              <li>사업자등록번호 100-80-12345</li>
+              <li>통신판매 신고번호 서울강서 1234호</li>
+            </ul>
+          </div>
+          <p class="copyright">© 2021 HOHO HOTELS & RESORTS Co. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          $('.slider').bxSlider({
+              auto: true, // 자동으로 애니메이션 시작
+              speed: 900, // 애니메이션 속도
+              pause: 4000, // 애니메이션 유지 시간 (1000은 1초)
+              mode: 'horizontal', // 슬라이드 모드 ('fade', 'horizontal', 'vertical')
+              pager: false, // 페이지 표시 보여짐
+              captions: true, // 이미지 위에 텍스트를 넣을 수 있음
+              controls: true,
+          });
+      });
+  </script>
+
+</body>
+</html>
